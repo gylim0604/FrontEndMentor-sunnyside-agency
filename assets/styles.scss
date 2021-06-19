@@ -4,7 +4,92 @@
 $Fraunces: 'Fraunces', serif;
 $Barlow: 'Barlow', sans-serif;
 
-html, body{
-    font-family: $Barlow;
-    font-weight: 600;
+// Colors
+$soft-red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$desaturated-cyan: hsl(167, 40%, 24%);
+$dark-blue: hsl(198, 62%, 26%);
+$dark-cyan: hsl(168, 34%, 41%);
+
+$desaturated-blue: hsl(212, 27%, 19%);
+$very-dark-grayish-blue: hsl(213, 9%, 39%);
+$dark-grayish-blue: hsl(232, 10%, 55%);
+$grayish-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+html,
+body {
+  font-family: $Barlow;
+  font-weight: 600;
+}
+
+.landing {
+  color: $white;
+  height: 100vh;
+  background: url('../images/mobile/image-header.jpg') no-repeat center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.nav {
+  align-self: end;
+  ul {
+    display: none;
+  }
+}
+
+.landing-content {
+  display: flex;
+  padding-top: 18vh;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  h1 {
+    padding: 3rem 0;
+    font-family: $Fraunces;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 0.25rem;
+  }
+}
+
+.about-card-content {
+  height: 55vh;
+  img{
+      height: 100%;
+      object-fit: cover;
+  }
+}
+
+
+#transform > .about-card-left {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: $dark-grayish-blue;
+
+  h2 {
+    padding: 1rem 0;
+    font-family: $Fraunces;
+    font-weight: 900;
+    font-size: 2rem;
+    color: $desaturated-blue;
+  }
+  a {
+      display: block;
+    padding: 1rem 0;
+    font-family: $Fraunces;
+    font-weight: 900;
+    color: $desaturated-blue;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 }
