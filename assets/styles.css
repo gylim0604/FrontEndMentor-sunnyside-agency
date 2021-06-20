@@ -64,23 +64,34 @@ body {
   letter-spacing: 0.25rem;
 }
 
-.about-card-content {
-  height: 55vh;
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.about-card-content img {
+.about-img-only {
+  height: 375px;
+}
+
+.about-img-only img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-#transform > .about-card-left {
+.about-text-only {
+  height: 400px;
   text-align: center;
   padding: 2rem 1.5rem;
   color: #818498;
 }
 
-#transform > .about-card-left h2 {
+.about-text-only h3 {
   padding: 1rem 0;
   font-family: "Fraunces", serif;
   font-weight: 900;
@@ -88,13 +99,167 @@ body {
   color: #23303e;
 }
 
-#transform > .about-card-left a {
-  display: block;
-  padding: 1rem 0;
+.about-text-only a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-top: 2rem;
   font-family: "Fraunces", serif;
   font-weight: 900;
   color: #23303e;
   text-transform: uppercase;
   text-decoration: none;
+  position: relative;
+  z-index: 2;
+}
+
+.about-text-only a::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 85%;
+  width: 110%;
+  left: -5%;
+  height: 20%;
+  border-radius: 15px;
+}
+
+.about-card-and-image {
+  height: 600px;
+  position: relative;
+}
+
+.about-card-and-image img {
+  height: 100%;
+}
+
+.about-card-and-image .content {
+  padding: 2rem 1.5rem;
+  position: absolute;
+  top: 55%;
+  text-align: center;
+}
+
+.about-card-and-image .content h3 {
+  padding: 1rem 0;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #25564b;
+}
+
+.about-card-and-image .content p {
+  color: #25564b;
+}
+
+#transform-text a::before {
+  background: #fff7c7;
+}
+
+#stand-out-text a::before {
+  background: #ffd2cc;
+}
+
+.testimonials {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 1rem;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  color: #a7abae;
+}
+
+.testimonials .card {
+  padding: 1rem 0;
+}
+
+.testimonials .card img {
+  margin: 2rem 0;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.testimonials .card p {
+  color: #5a636c;
+  line-height: 1.7rem;
+}
+
+.testimonials .card span {
+  display: inline-block;
+  padding-top: 2rem;
+}
+
+.testimonials .card span h4 {
+  font-family: "Fraunces", serif;
+  color: #23303e;
+}
+
+.testimonials .card span p {
+  font-size: .75rem;
+  color: #a7abae;
+}
+
+.footer-img-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer-img-gallery img {
+  width: 50vw;
+}
+
+.footer {
+  padding: 2rem 1rem;
+  background: #9ccec4;
+  color: #458c7e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .logo {
+  color: white;
+}
+
+.footer-nav {
+  width: 100%;
+}
+
+.footer-nav ul {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.social-links {
+  width: 75%;
+}
+
+.social-links ul {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 /*# sourceMappingURL=styles.css.map */
