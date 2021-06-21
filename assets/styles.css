@@ -133,6 +133,7 @@ body {
 
 .about-img-only img {
   height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -183,7 +184,10 @@ body {
 }
 
 .about-card-and-image img {
+  width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about-card-and-image .content {
@@ -303,6 +307,7 @@ body {
 }
 
 .social-links {
+  max-width: 375px;
   width: 75%;
 }
 
