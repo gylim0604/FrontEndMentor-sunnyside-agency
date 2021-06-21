@@ -293,6 +293,7 @@ body {
 }
 
 .footer-nav {
+  max-width: 375px;
   width: 100%;
 }
 
@@ -307,7 +308,7 @@ body {
 }
 
 .social-links {
-  max-width: 375px;
+  max-width: 300px;
   width: 75%;
 }
 
@@ -319,5 +320,84 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 769px) {
+  .landing {
+    background: url("../images/desktop/image-header.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .about {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about-card {
+    height: 50vh;
+    width: 50%;
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  .about-card:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .about-text-only {
+    padding: 3rem 3rem;
+  }
+  .about-card-and-image .content {
+    top: 45%;
+  }
+  .testimonial-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .testimonial-wrapper .card {
+    margin: 1rem;
+  }
+  .footer-img-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer-img-gallery img {
+    width: 25%;
+  }
+  .nav .nav-burger {
+    display: none;
+  }
+  .nav ul {
+    all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    list-style-type: none;
+  }
+  .nav ul::after {
+    all: unset;
+  }
+  .nav ul li {
+    padding: 1rem 2rem;
+    margin: unset;
+  }
+  .nav ul li:nth-child(4) {
+    background: white;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
