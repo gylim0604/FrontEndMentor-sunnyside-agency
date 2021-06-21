@@ -33,10 +33,10 @@
           <img src="images/logo.svg" alt="Sunnyside logo" />
         </span>
         <nav class="nav">
-          <div class="nav-burger">
+          <div class="nav-burger" id="nav-button">
             <img src="images/icon-hamburger.svg" alt="" />
           </div>
-          <ul>
+          <ul id="menu">
             <li>About</li>
             <li>Services</li>
             <li>Projects</li>
@@ -68,7 +68,8 @@
         <img src="images/mobile/image-stand-out.jpg" alt="" />
       </div>
       <div class="about-card about-text-only" id="stand-out-text">
-        <h3>Stand out to the right audience</h3>stand-out-text
+        <h3>Stand out to the right audience</h3>
+        stand-out-text
         <p>
           Using a collaborative formula of designers, researchers,
           photographers, videographers, and copywriters, we’ll build and extend
@@ -140,10 +141,10 @@
 
     <section class="footer-container">
       <div class="footer-img-gallery">
-        <img src="images/mobile/image-gallery-milkbottles.jpg" alt="">
-        <img src="images/mobile/image-gallery-orange.jpg" alt="">
-        <img src="images/mobile/image-gallery-cone.jpg" alt="">
-        <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="">
+        <img src="images/mobile/image-gallery-milkbottles.jpg" alt="" />
+        <img src="images/mobile/image-gallery-orange.jpg" alt="" />
+        <img src="images/mobile/image-gallery-cone.jpg" alt="" />
+        <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="" />
       </div>
       <footer class="footer">
         <img src="images/logo.svg" alt="" class="logo" />
@@ -156,13 +157,23 @@
         </nav>
         <div class="social-links">
           <ul>
-            <li><img src="images/icon-facebook.svg" alt=""></li>
-            <li><img src="images/icon-instagram.svg" alt=""></li>
-            <li><img src="images/icon-twitter.svg" alt=""></li>
-            <li><img src="images/icon-pinterest.svg" alt=""></li>
+            <li><img src="images/icon-facebook.svg" alt="" /></li>
+            <li><img src="images/icon-instagram.svg" alt="" /></li>
+            <li><img src="images/icon-twitter.svg" alt="" /></li>
+            <li><img src="images/icon-pinterest.svg" alt="" /></li>
           </ul>
         </div>
       </footer>
     </section>
+
+    <script>
+      let menuBtn = document.getElementById('nav-button');
+      let menu = document.getElementById('menu');
+
+      menuBtn.addEventListener("click", mobileMenu);
+      function mobileMenu() {
+        menu.classList.toggle('active');
+      }
+    </script>
   </body>
 </html>

@@ -39,11 +39,51 @@ body {
   justify-content: space-between;
 }
 .nav {
+  position: relative;
   align-self: end;
   ul {
-    display: none;
+    transform: scale(0);
+    transform-origin:top right;
+    transition: all .25s ease-in-out;
+    top: 4rem;
+    right: 0;
+    position: absolute;
+    width: calc(100vw - 3rem);
+    background: $white;
+    color: $dark-grayish-blue;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    align-items: center;
+    &::after{
+      content: "";
+      background: $white;
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      top: -1.5rem;
+      right: 0;
+      clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    }
+
+    &.active{
+        transform: scale(1)!important;
+    }
+    li{
+      padding: 1rem 2rem;
+      margin: 1rem 0;
+      &:nth-child(4){
+        font-family: $Fraunces;
+        color: $desaturated-blue;
+        text-transform: uppercase;
+        background: $yellow;
+        border-radius: 2rem;
+      }
+    }
   }
 }
+
+
 
 .landing-content {
   display: flex;

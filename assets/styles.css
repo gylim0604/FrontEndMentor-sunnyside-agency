@@ -30,13 +30,66 @@ body {
 }
 
 .nav {
+  position: relative;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
 }
 
 .nav ul {
-  display: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  top: 4rem;
+  right: 0;
+  position: absolute;
+  width: calc(100vw - 3rem);
+  background: white;
+  color: #818498;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav ul::after {
+  content: "";
+  background: white;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -1.5rem;
+  right: 0;
+  -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+          clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.nav ul.active {
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+}
+
+.nav ul li {
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+}
+
+.nav ul li:nth-child(4) {
+  font-family: "Fraunces", serif;
+  color: #23303e;
+  text-transform: uppercase;
+  background: #fad400;
+  border-radius: 2rem;
 }
 
 .landing-content {
