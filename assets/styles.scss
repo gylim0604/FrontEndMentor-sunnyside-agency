@@ -37,6 +37,12 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  .logo{
+    img{
+      filter: invert(99%) sepia(0%) saturate(1811%) hue-rotate(41deg) brightness(118%) contrast(98%);
+    }
+  }
 }
 .nav {
   position: relative;
@@ -231,8 +237,11 @@ body {
 .footer-img-gallery{
   display: flex;
   flex-wrap: wrap;
-  img{
+  picture{
     width: 50vw;
+    img{
+      height: 100%;
+    }
   }
 }
 
@@ -245,7 +254,7 @@ body {
   align-items: center;
 
   .logo{
-    color: $white;
+    filter: invert(35%) sepia(47%) saturate(458%) hue-rotate(118deg) brightness(101%) contrast(94%);
   }
 }
 
@@ -266,6 +275,11 @@ body {
     padding: 1rem;
     display: flex;
     justify-content: space-evenly;
+    li{
+      img{
+        filter: invert(35%) sepia(47%) saturate(458%) hue-rotate(118deg) brightness(101%) contrast(94%);
+      }
+    }
   }
 }
 
@@ -275,39 +289,16 @@ body {
     background-size: cover;
   }
 
-  .about{
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .about-card{
-    height: 50vh;
-    width: 50%;
-    order: 6;
-    &:nth-child(2){
-      order: 1;
-    }
-  }
-  .about-text-only {
-    padding: 3rem 3rem;
-  }
-
-  .about-card-and-image {
-    .content {
-      top: 45%;
-    }
-  }
-  .testimonial-wrapper{
-    display: flex;
-    flex-direction: row;
-    .card{
-      margin: 1rem;
-    }
-  }
-  .footer-img-gallery{
-    display: flex;
-    flex-wrap: wrap;
+  .logo{
+    width: 10vw;
     img{
-      width: 25%;
+      width: 100%;
+    }
+  }
+  .landing-content{
+    padding-top: unset;
+    h1{
+      padding: 4rem 0 6rem;
     }
   }
   .nav{
@@ -328,9 +319,110 @@ body {
         margin: unset;
         &:nth-child(4){
           background: $white;
+          transition: all .1s ease-in;
+          &:hover{
+            cursor: pointer;
+            background: rgba(255,255,255,0.3);
+            color: $white;
+          }
         }
       }
     }
+  }
 
+  .about{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .about-card{
+    height: auto;
+    width: 50%;
+    order: 6;
+    &:nth-child(2){
+      order: 1;
+    }
+  }
+  .about-text-only {
+    padding:15% 5% 0;
+  }
+
+  .about-card-and-image {
+    .content {
+      padding: 2rem 5%;
+      top: 55%;
+    }
+  }
+
+  #transform-text{
+    a{
+      &::before{
+        transition: all .2s ease-in-out;
+      }
+      &:hover::before{
+          background: lighten($yellow,10%);
+
+      }
+    }
+  }
+  
+  #stand-out-text{
+    a{
+      &::before{
+        transition: all .2s ease-in-out;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+      &:hover::before{
+        
+          background: $soft-red;
+
+      }
+    }
+  }
+  .testimonial-wrapper{
+    display: flex;
+    flex-direction: row;
+    .card{
+      margin: 1rem;
+    }
+  }
+  .footer{
+    height: 40vh;
+    justify-content: center;
+
+    .logo{
+      width: 10vw;
+      padding: 1rem 0;
+    }
+  }
+  .footer-img-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    picture{
+      width: 25%;
+
+    }
+  }
+  .footer-nav{
+    ul{
+      li:hover{
+        
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+  
+  .social-links{
+    padding-top: 2rem;
+    ul{
+      li{
+        img:hover{
+          cursor: pointer;
+          filter: invert(99%) sepia(0%) saturate(1811%) hue-rotate(41deg) brightness(118%) contrast(98%);
+        }
+      }
+    }
   }
 }
